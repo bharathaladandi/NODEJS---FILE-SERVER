@@ -11,6 +11,12 @@ const app = http.createServer((req,res)=>{
             res.end();
         }
     }
+    else if(req.url === "/public"){
+        if(req.method === "GET"){
+            res.write(pub);
+            res.end();
+        }
+    }
 
 })
 
